@@ -12,14 +12,25 @@ export default function HostSection({ host, coHosts }) {
           <div className={styles.hostCard}>
             <div className={styles.hostCardInner}>
               <div className={styles.avatarSection}>
-                <div className={styles.avatar} style={{ background: host.avatarColor }}>
-                  <span className={styles.avatarInitials}>{host.initials}</span>
-                  <div className={styles.verifiedBadge}>
-                    <svg viewBox="0 0 32 32" width="14" height="14" fill="white">
-                       <path d="M16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15zm-3.5-8l12-12-2.12-2.12L12.5 18.76l-4.88-4.88-2.12 2.12 7 7z" fill="#E31C5F"/>
-                    </svg>
+                {host.avatarImage ? (
+                  <div className={styles.avatar}>
+                    <img src={host.avatarImage} alt={host.name} className={styles.avatarImage} />
+                    <div className={styles.verifiedBadge}>
+                      <svg viewBox="0 0 32 32" width="14" height="14" fill="white">
+                         <path d="M16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15zm-3.5-8l12-12-2.12-2.12L12.5 18.76l-4.88-4.88-2.12 2.12 7 7z" fill="#E31C5F"/>
+                      </svg>
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  <div className={styles.avatar} style={{ background: host.avatarColor }}>
+                    <span className={styles.avatarInitials}>{host.initials}</span>
+                    <div className={styles.verifiedBadge}>
+                      <svg viewBox="0 0 32 32" width="14" height="14" fill="white">
+                         <path d="M16 31c-8.28 0-15-6.72-15-15s6.72-15 15-15 15 6.72 15 15-6.72 15-15 15zm-3.5-8l12-12-2.12-2.12L12.5 18.76l-4.88-4.88-2.12 2.12 7 7z" fill="#E31C5F"/>
+                      </svg>
+                    </div>
+                  </div>
+                )}
                 <h3 className={styles.hostName}>{host.name}</h3>
                 <p className={styles.hostLabel}>Host</p>
               </div>

@@ -75,10 +75,43 @@
   padding: 32px 0;
 }
 
-.photoGrid {
-  max-width: 800px;
+.contentLayout {
+  max-width: 1040px;
   margin: 0 auto;
   padding: 0 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionRow {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: start;
+  padding: 48px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.sectionRow:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.textCol {
+  /* Constrains the sticky element */
+  align-self: stretch;
+}
+
+.stickyText {
+  position: sticky;
+  top: 48px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.imageCol {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -120,15 +153,13 @@
   background: rgba(0,0,0,0.04);
 }
 
-.photoCategory {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  background: rgba(255,255,255,0.9);
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--color-text);
-  backdrop-filter: blur(4px);
+@media (max-width: 768px) {
+  .sectionRow {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 32px 0;
+  }
+  .stickyText {
+    position: static;
+  }
 }

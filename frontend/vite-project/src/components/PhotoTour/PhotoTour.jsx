@@ -15,6 +15,14 @@ export default function PhotoTour({ images, onClose, onOpenLightbox }) {
     closeBtnRef.current?.focus();
   }, []);
 
+  // Group images by category for the sticky sections
+  const groupedImages = images.reduce((acc, img) => {
+    const category = img.category || 'Gallery';
+    if (!acc[category]) acc[category] = [];
+    acc[category].push(img);
+    return acc;
+  }, {});
+
   return (
     <div
       className={styles.overlay}
@@ -47,25 +55,40 @@ export default function PhotoTour({ images, onClose, onOpenLightbox }) {
         </div>
       </div>
 
-      {/* Photo Grid */}
+      {/* Photo Grid / Sticky Tour Layout */}
       <div ref={containerRef} className={styles.scrollArea}>
-        <div className={styles.photoGrid}>
-          {images.map((img, idx) => (
-            <button
-              key={img.id}
-              className={styles.photoCard}
-              onClick={(e) => onOpenLightbox(idx, e)}
-              aria-label={`View full size: ${img.alt}`}
-            >
-              <img
-                src={img.src}
-                alt={img.alt}
-                className={styles.photo}
-                loading="lazy"
-              />
-              <div className={styles.photoOverlay} aria-hidden="true" />
-              <span className={styles.photoCategory}>{img.category}</span>
-            </button>
+        <div className={styles.contentLayout}>
+          {Object.entries(groupedImages).map(([category, categoryImages]) => (
+            <div key={category} className={styles.sectionRow}>
+              
+              {/* Left text column - sticky */}
+              <div className={styles.textCol}>
+                <h2 className={styles.stickyText}>{category}</h2>
+              </div>
+
+              {/* Right image column - scrolling */}
+              <div className={styles.imageCol}>
+                {categoryImages.map((img) => {
+                  const globalIdx = images.findIndex((i) => i.id === img.id);
+                  return (
+                    <button
+                      key={img.id}
+                      className={styles.photoCard}
+                      onClick={(e) => onOpenLightbox(globalIdx, e)}
+                      aria-label={`View full size: ${img.alt}`}
+                    >
+                      <img
+                        src={img.src}
+                        alt={img.alt}
+                        className={styles.photo}
+                        loading="lazy"
+                      />
+                      <div className={styles.photoOverlay} aria-hidden="true" />
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           ))}
         </div>
       </div>

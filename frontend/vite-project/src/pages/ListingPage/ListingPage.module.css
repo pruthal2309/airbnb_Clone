@@ -1,5 +1,5 @@
 .main {
-  min-height: calc(100vh - var(--header-height));
+  min-height: 100vh;
 }
 
 .container {
@@ -12,9 +12,8 @@
 .contentLayout {
   display: grid;
   grid-template-columns: 1fr 380px;
-  gap: 80px;
+  gap: 56px;
   padding-top: 32px;
-  align-items: flex-start;
 }
 
 .leftCol {
@@ -22,7 +21,8 @@
 }
 
 .rightCol {
-  /* BookingCard is sticky inside */
+  /* Stretch to match left column so sticky children have room to scroll */
+  min-width: 0;
 }
 
 .sectionDivider {
@@ -181,4 +181,22 @@
   justify-content: center;
   cursor: not-allowed;
   opacity: 0.4;
+}
+
+@media (max-width: 1128px) {
+  .contentLayout {
+    grid-template-columns: 1fr 340px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 950px) {
+  .contentLayout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .rightCol {
+    width: 100%;
+  }
 }

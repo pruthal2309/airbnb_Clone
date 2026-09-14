@@ -9,6 +9,11 @@
   align-items: center;
 }
 
+.static {
+  position: static !important;
+  z-index: 1;
+}
+
 .inner {
   max-width: var(--max-width);
   width: 100%;
@@ -30,11 +35,9 @@
   flex-shrink: 0;
 }
 
-.logoText {
-  font-size: 22px;
-  font-weight: 600;
-  color: #FF385C;
-  letter-spacing: -0.5px;
+.logoImage {
+  height: 36px;
+  object-fit: contain;
 }
 
 /* Search Bar */
@@ -77,6 +80,12 @@
 
 .searchItem:hover {
   background: #f0f0f0;
+}
+
+.homeIcon {
+  width: 18px;
+  height: 18px;
+  margin-right: 6px;
 }
 
 .searchGuests {

@@ -39,7 +39,7 @@ function AmenityIcon({ icon }) {
 
 export default function AmenitiesSection({ amenities, totalAmenities }) {
   const [showAll, setShowAll] = useState(false);
-  const displayedAmenities = showAll ? amenities : amenities.slice(0, 8);
+  const displayedAmenities = showAll ? amenities : amenities.slice(0, 10);
 
   return (
     <section id="amenities" className={styles.section} aria-labelledby="amenities-heading">

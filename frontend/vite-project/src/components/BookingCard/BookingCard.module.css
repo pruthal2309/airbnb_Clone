@@ -4,7 +4,7 @@
   box-shadow: var(--shadow-card);
   overflow: hidden;
   position: sticky;
-  top: calc(var(--header-height) + 60px);
+  top: 80px; /* subnav (56px) + small gap (24px) */
   align-self: flex-start;
 }
 
@@ -210,4 +210,12 @@
 
 .reportBtn:hover {
   color: var(--color-text);
+}
+
+@media (max-width: 950px) {
+  .card {
+    position: static !important;
+    width: 100%;
+    margin-top: 32px;
+  }
 }

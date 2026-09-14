@@ -9,7 +9,10 @@ export default function BookingCard({ pricing }) {
   const pricePerNight = Math.round(totalPrice / nights);
 
   return (
-    <aside className={styles.card} aria-label="Booking information">
+    <aside
+      className={styles.card}
+      aria-label="Booking information"
+    >
       {/* Discount Banner */}
       <div className={styles.discountBanner}>
         <svg viewBox="0 0 32 32" width="18" height="18" fill="#008A05" aria-hidden="true">

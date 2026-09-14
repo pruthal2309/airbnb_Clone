@@ -1,6 +1,7 @@
 import { createPortal } from 'react-dom';
 import { useState } from 'react';
 import Header from '../../components/Header/Header';
+
 import PropertyHeader from '../../components/PropertyHeader/PropertyHeader';
 import PropertyGallery from '../../components/PropertyGallery/PropertyGallery';
 import StickySubNav from '../../components/StickySubNav/StickySubNav';
@@ -183,7 +184,7 @@ export default function ListingPage() {
 
   return (
     <>
-      <Header />
+      <Header isStatic={true} />
 
       <main className={styles.main}>
         <div className={styles.container}>
@@ -224,7 +225,7 @@ export default function ListingPage() {
               <CalendarSection pricing={property.pricing} />
             </div>
 
-            {/* Right Column — Booking Card */}
+            {/* Right Column — Booking Card (floats until end of container) */}
             <div className={styles.rightCol}>
               <BookingCard pricing={property.pricing} />
             </div>

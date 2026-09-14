@@ -85,13 +85,19 @@ export default function PropertyDetails({ property }) {
 
       {/* Host Info */}
       <div className={styles.host}>
-        <div
-          className={styles.hostAvatar}
-          style={{ background: host.avatarColor }}
-          aria-hidden="true"
-        >
-          {host.initials}
-        </div>
+        {host.avatarImage ? (
+          <div className={styles.hostAvatar}>
+            <img src={host.avatarImage} alt={host.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }} />
+          </div>
+        ) : (
+          <div
+            className={styles.hostAvatar}
+            style={{ background: host.avatarColor }}
+            aria-hidden="true"
+          >
+            {host.initials}
+          </div>
+        )}
         <div>
           <p className={styles.hostedBy}>Hosted by {host.name}</p>
           <p className={styles.hostingYears}>{host.yearsHosting} years hosting</p>
