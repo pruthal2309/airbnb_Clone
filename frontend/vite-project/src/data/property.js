@@ -1,0 +1,254 @@
+// Property Images Data
+export const propertyImages = [
+  {
+    id: 'hero',
+    src: '/images/gallery-hero.png',
+    alt: 'Spacious lounge area with rattan chairs and stone wall',
+    category: 'Living area',
+  },
+  {
+    id: 'lounge',
+    src: '/images/gallery-lounge.png',
+    alt: 'Outdoor seating area with rattan chairs and wall sconces',
+    category: 'Outdoor',
+  },
+  {
+    id: 'jacuzzi',
+    src: '/images/gallery-jacuzzi.png',
+    alt: 'Luxury indoor jacuzzi with wooden surround',
+    category: 'Bathroom',
+  },
+  {
+    id: 'bedroom',
+    src: '/images/gallery-bedroom.png',
+    alt: 'Cozy bedroom with double bed and wooden floors',
+    category: 'Bedroom',
+  },
+  {
+    id: 'building',
+    src: '/images/gallery-building.png',
+    alt: 'Exterior view of the apartment building',
+    category: 'Building',
+  },
+  // Photo Tour extras (reuse images in different order)
+  {
+    id: 'hero2',
+    src: '/images/gallery-hero.png',
+    alt: 'Lounge area wide angle',
+    category: 'Living area',
+  },
+  {
+    id: 'jacuzzi2',
+    src: '/images/gallery-jacuzzi.png',
+    alt: 'Jacuzzi close up',
+    category: 'Bathroom',
+  },
+  {
+    id: 'bedroom2',
+    src: '/images/sleep-bedroom.png',
+    alt: 'Master bedroom with natural light',
+    category: 'Bedroom',
+  },
+  {
+    id: 'lounge2',
+    src: '/images/gallery-lounge.png',
+    alt: 'Evening lounge view',
+    category: 'Outdoor',
+  },
+  {
+    id: 'building2',
+    src: '/images/gallery-building.png',
+    alt: 'Building exterior aerial view',
+    category: 'Building',
+  },
+];
+
+export const property = {
+  id: 'mirashya-ug10',
+  title: 'Romantic Jacuzzi 1BHK Candolim | Mirashya UG10',
+  type: 'Entire serviced apartment',
+  location: 'Candolim, India',
+  specs: {
+    guests: 3,
+    bedrooms: 1,
+    beds: 1,
+    bathrooms: 1,
+  },
+  rating: 4.95,
+  reviewCount: 19,
+  isGuestFavourite: true,
+  host: {
+    name: 'Mirashya Homes',
+    initials: 'MH',
+    avatarColor: '#1D4D4F',
+    yearsHosting: 2,
+    reviews: '1,463',
+    rating: 4.68,
+    bornIn: '80s',
+    school: 'NICMAR GOA',
+    responseRate: '100%',
+    responseTime: 'within an hour',
+  },
+  coHosts: [
+    { name: 'Sharath', image: '/images/gallery-hero.png', initial: 'S' },
+    { name: 'Simran', image: '/images/gallery-hero.png', initial: 'S' },
+    { name: 'Shruti', image: null, initial: 'S' },
+    { name: 'Aman Dev Pahwa', image: '/images/gallery-hero.png', initial: 'A' },
+    { name: 'Pallavi', image: '/images/gallery-hero.png', initial: 'P' },
+    { name: 'Amisha', image: null, initial: 'A' },
+    { name: 'Maria Karen Priyanka', image: '/images/gallery-hero.png', initial: 'M' },
+    { name: 'Sanyukta', image: '/images/gallery-hero.png', initial: 'S' }
+  ],
+  locationDetails: {
+    city: 'Candolim, Goa, India',
+    description: 'Located in the heart of Candolim, Amor de Goa offers a peaceful stay with easy access to beaches, cafés, and popular attractions.'
+  },
+  thingsToKnow: {
+    cancellation: [
+      'Free cancellation before 17 October. Cancel before check-in on 18 October for a partial refund.',
+      'Review this host\'s full policy for details.'
+    ],
+    rules: [
+      'Check-in after 2:00 pm',
+      'Checkout before 11:00 am',
+      '3 guests maximum'
+    ],
+    safety: [
+      'Carbon monoxide alarm not reported',
+      'Smoke alarm not reported',
+      'Exterior security cameras on property'
+    ]
+  },
+  highlights: [
+    {
+      icon: 'outdoor',
+      title: 'Outdoor entertainment',
+      description: 'The pool and alfresco dining are great for summer trips.',
+    },
+    {
+      icon: 'cool',
+      title: 'Designed for staying cool',
+      description: 'Beat the heat with the A/C and ceiling fan.',
+    },
+    {
+      icon: 'selfcheckin',
+      title: 'Self check-in',
+      description: 'You can check in with the building staff.',
+    },
+  ],
+  pricing: {
+    totalPrice: 28499,
+    nights: 5,
+    currency: '₹',
+    checkIn: '10/18/2026',
+    checkOut: '10/23/2026',
+    guests: 2,
+    cancellationDate: '17 October',
+    discountOffer: 'Get 10% off your next stay.',
+  },
+  amenities: [
+    { icon: 'kitchen', label: 'Kitchen', available: true },
+    { icon: 'wifi', label: 'Wifi', available: true },
+    { icon: 'workspace', label: 'Dedicated workspace', available: true },
+    { icon: 'parking', label: 'Free parking on premises', available: true },
+    { icon: 'pool', label: 'Pool', available: true },
+    { icon: 'hottub', label: 'Hot tub', available: true },
+    { icon: 'pets', label: 'Pets allowed', available: true },
+    { icon: 'camera', label: 'Exterior security cameras on property', available: true },
+    { icon: 'coalarm', label: 'Carbon monoxide alarm', available: false },
+    { icon: 'smokealarm', label: 'Smoke alarm', available: false },
+  ],
+  totalAmenities: 50,
+  sleepRooms: [
+    {
+      id: 'bedroom',
+      name: 'Bedroom',
+      description: '1 double bed',
+      image: '/images/sleep-bedroom.png',
+    },
+    {
+      id: 'livingroom',
+      name: 'Living room',
+      description: '1 sofa',
+      image: '/images/gallery-hero.png',
+    },
+  ],
+  reviews: [
+    {
+      id: 1,
+      author: 'Priya S.',
+      avatar: 'P',
+      date: 'August 2026',
+      text: 'Absolutely stunning property! The jacuzzi was our favourite feature. Mirashya Homes team was incredibly responsive and helpful throughout our stay.',
+    },
+    {
+      id: 2,
+      author: 'Rahul M.',
+      avatar: 'R',
+      date: 'July 2026',
+      text: 'Perfect location in Candolim. The apartment was spotlessly clean, beautifully designed, and had everything we needed. Will definitely book again!',
+    },
+    {
+      id: 3,
+      author: 'Anjali K.',
+      avatar: 'A',
+      date: 'June 2026',
+      text: 'The hot tub was an incredible bonus. The space is luxurious and felt very private. Check-in was seamless and the building staff were very helpful.',
+    },
+    {
+      id: 4,
+      author: 'David L.',
+      avatar: 'D',
+      date: 'May 2026',
+      text: 'Wonderful experience! The photos don\'t do it justice. The property exceeded our expectations in every way — highly recommend for couples.',
+    },
+    {
+      id: 5,
+      author: 'Sneha T.',
+      avatar: 'S',
+      date: 'April 2026',
+      text: 'Beautiful 1BHK with a gorgeous jacuzzi. The host was very communicative. A few small things could be improved but overall a 5-star experience.',
+    },
+    {
+      id: 6,
+      author: 'James W.',
+      avatar: 'J',
+      date: 'March 2026',
+      text: 'Exceptional property in a great location. Clean, modern, and the jacuzzi made our anniversary very special. The pool area is also lovely.',
+    },
+  ],
+  categoryRatings: [
+    { label: 'Cleanliness', value: 5.0, icon: 'cleanliness' },
+    { label: 'Accuracy', value: 5.0, icon: 'accuracy' },
+    { label: 'Check-in', value: 5.0, icon: 'checkin' },
+    { label: 'Communication', value: 5.0, icon: 'communication' },
+    { label: 'Location', value: 4.8, icon: 'location' },
+    { label: 'Value', value: 4.8, icon: 'value' },
+  ],
+  ratingDistribution: [
+    { stars: 5, count: 17 },
+    { stars: 4, count: 2 },
+    { stars: 3, count: 0 },
+    { stars: 2, count: 0 },
+    { stars: 1, count: 0 },
+  ],
+  reviewTags: [
+    { label: 'Comfort', count: 6 },
+    { label: 'Accuracy', count: 5 },
+    { label: 'Hot tub', count: 5 },
+    { label: 'Condition', count: 4 },
+    { label: 'Hospitality', count: 8 },
+    { label: 'Cleanliness', count: 4 },
+    { label: 'Amenities', count: 2 },
+  ],
+  nearbyStays: [
+    { id: 1, title: 'Beautiful Studio with a view to die for', price: '₹23,600', rating: 4.91, image: '/images/1.png' },
+    { id: 2, title: 'NAQAB - 1bhk with private pool', price: '₹42,218', rating: 4.95, image: '/images/2.png' },
+    { id: 3, title: 'Greentique Luxury Flat with plunge pool, Calangute', price: '₹44,506', rating: 4.94, image: '/images/3.png' },
+    { id: 4, title: 'The Tropical Studio | 5 mins to Beach', price: '₹22,824', rating: 4.96, image: '/images/4.png' },
+    { id: 5, title: 'Luxury Casa Bella 1BHK with plunge pool, Calangute', price: '₹39,942', rating: 4.95, image: '/images/5.png' },
+    { id: 6, title: 'Modern Apartment near Baga Beach', price: '₹28,500', rating: 4.88, image: '/images/6.png' },
+    { id: 7, title: 'Cozy Villa with Garden, Anjuna', price: '₹55,200', rating: 4.98, image: '/images/7.png' },
+    { id: 8, title: 'Seaview Penthouse with Private Terrace', price: '₹62,100', rating: 4.99, image: '/images/8.png' }
+  ]
+};

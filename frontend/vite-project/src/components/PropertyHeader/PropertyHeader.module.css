@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 0 16px;
+  gap: 16px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.25;
+  flex: 1;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: background var(--transition);
+}
+
+.actionBtn:hover {
+  background: var(--color-bg-hover);
+}
+
+.savedText {
+  color: #FF385C;
+}

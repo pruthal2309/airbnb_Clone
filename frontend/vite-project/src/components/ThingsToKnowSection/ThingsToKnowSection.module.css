@@ -1,0 +1,74 @@
+.section {
+  padding: 48px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 744px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.iconHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.iconHeading img {
+  /* Converts the light-grey SVG to black */
+  filter: brightness(0);
+}
+
+.colTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.listItem {
+  font-size: 16px;
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.learnMoreBtn {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  align-self: flex-start;
+}

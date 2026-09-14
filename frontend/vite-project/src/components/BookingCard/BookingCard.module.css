@@ -1,0 +1,213 @@
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  position: sticky;
+  top: calc(var(--header-height) + 60px);
+  align-self: flex-start;
+}
+
+/* Discount Banner */
+.discountBanner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #fff;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.termsLink {
+  color: var(--color-text);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.claimBtn {
+  margin-left: auto;
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-md);
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #fff;
+  cursor: pointer;
+  transition: background var(--transition);
+  white-space: nowrap;
+}
+
+.claimBtn:hover {
+  background: var(--color-bg-hover);
+}
+
+.cardBody {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Price */
+.priceRow {
+  font-size: 15px;
+  color: var(--color-text);
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.priceLabel {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+/* Date Grid */
+.dateGrid {
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+
+.dateBox {
+  padding: 12px 14px;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.dateBox:hover {
+  background: var(--color-bg-hover);
+}
+
+.dateBox:last-child {
+  border-bottom: none;
+}
+
+.dateBox:nth-child(2) {
+  border-right: none;
+}
+
+.guestBox {
+  grid-column: 1 / -1;
+  border-right: none;
+  border-bottom: none;
+}
+
+.guestInner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dateLabel {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: var(--color-text);
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.dateValue {
+  font-size: 14px;
+  color: var(--color-text);
+  font-weight: 400;
+}
+
+/* Cancellation */
+.cancellation {
+  font-size: 14px;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* Reserve Button */
+.reserveBtn {
+  background: var(--color-primary-gradient);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity var(--transition), transform var(--transition);
+  letter-spacing: 0.2px;
+}
+
+.reserveBtn:hover {
+  opacity: 0.92;
+  transform: scale(1.01);
+}
+
+.noCharge {
+  font-size: 14px;
+  color: var(--color-text);
+  text-align: center;
+}
+
+/* Breakdown */
+.breakdown {
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+}
+
+.breakdownRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: var(--color-text);
+  margin-bottom: 8px;
+}
+
+.breakdownLabel {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Report */
+.report {
+  padding: 16px 24px;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  justify-content: center;
+}
+
+.reportBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-secondary);
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.reportBtn:hover {
+  color: var(--color-text);
+}
